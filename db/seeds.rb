@@ -11,3 +11,7 @@ AdminUser.delete_all
 if Rails.env.development?
   AdminUser.create!(email: "admin@example.com", password: "password", password_confirmation: "password")
 end
+
+# query = URI.encode_www_form_component([horse.name, breed.name].join(","))
+#   downloaded_image = URI.open("https://source.unsplash.com/600x600/?#{query}")
+#  horse.image.attach(io: downloaded_image, filename: "m-#{[horse.name, breed.name].join('-')}.jpg")

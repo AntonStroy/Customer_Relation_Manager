@@ -4,12 +4,23 @@
     <title>U6CustomerRelationManager</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   </head>
 
   <body>
+    <h1 class="title is-1"> Movie Characters</h1>
+      <p>
+        <button class="button is-dark"><%= link_to "Home", root_path, class: "has-text-light" %></button>
+        <button class="button is-dark"><%= link_to "Sort by Name", alphabetized_path, class: "has-text-light" %></button>
+        <button class="button is-dark"><%= link_to "Missing email", missing_email_path, class: "has-text-light" %></button>
+      </p>
+      <br>
+      <hr>
+      <br>
     <%= yield %>
   </body>
 </html>

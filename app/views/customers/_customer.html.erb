@@ -1,25 +1,25 @@
-<p>
-  <strong><%= customer.name %></strong>
-</p>
+<div class="column is-one-quarter">
+  <div class="card">
+    <div class="card-image">
+      <% if customer.image.present? %>
+        <div class="card-image">
+          <figure class="image">
+            <%= image_tag customer.image.variant(resize_to_limit: [300, 300]) %>
+          </figure>
+        </div>
+      <% else %>
+        <p>IMAGE 📸</p>
+      <% end %>
+    </div>
 
-<p>
-  <strong><%= customer.phone %></strong>
-</p>
-
-<p>
-  <strong><%= customer.email %></strong>
-</p>
-
-<p>
-  <strong><%= customer.notes %></strong>
-</p>
-
-<% if customer.image.present? %>
-  <div class="card-image">
-  <figure class="image">
-  <%= image_tag customer.image %>
-  </figure>
+    <div class="card-content">
+        <div class="media-content">
+          <p class="title is-4"><strong><%= customer.name %></strong></p>
+          <p>Email: <strong><%= customer.email %></strong></p>
+          <p>Phone: <strong><%= customer.phone %></strong></p>
+          <br>
+          <p><strong><%= customer.notes %></strong></p>
+        </div>
+    </div>
   </div>
-<% else %>
-  <p>IMAGE 📸</p>
-<% end %>
+</div>
