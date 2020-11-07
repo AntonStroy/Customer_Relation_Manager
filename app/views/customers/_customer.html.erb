@@ -13,3 +13,13 @@
 <p>
   <strong><%= customer.notes %></strong>
 </p>
+
+<% if customer.image.present? %>
+  <div class="card-image">
+  <figure class="image">
+  <%= image_tag customer.image %>
+  </figure>
+  </div>
+<% else %>
+  <p>IMAGE 📸</p>
+<% end %>
